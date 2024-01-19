@@ -114,16 +114,6 @@ Supposons qu'on a deux VM `Kali` et `Ubuntu Serveur`
 > ```
 > cat parKali
 > ```
-> ```
-> gpg -o parKaliSigned -a --sign parKali
-> ```
-> ```
-> gpg --verify parKaliSigned
-> ```
-> ou bien (optionnel)
-> ```
-> gpg -o <outPutFile> --default-key  <keyiDtoSign> -a --sign <fileToSign>
-> ```
 > Chiffrer le fichier
 > ```
 > ATTENTION ! ici on est toujour sur Kali (Machine A) pour chiffrer le fichier il faut install GNUPG et SSH et Generer un clé et envoyer La clé publique sur
@@ -177,6 +167,23 @@ Supposons qu'on a deux VM `Kali` et `Ubuntu Serveur`
 > ```
 
 ***
+
+
+> [!IMPORTANT]
+> on peut signer un fichier aussi avant de chiffrer...il sert à quoi la signature ? aucune idée :D
+> parcontre on peut verifier si un fichier a été signé par l'autre machine et qui l'a signé <br>
+> qu'on lance cette commande on va signer avec le mot de passe de notre clé publique 
+> ```
+> gpg -o parKaliSigned -a --sign parKali
+> ```
+> ```
+> gpg --verify parKaliSigned
+> ```
+> Linux va signer le fichier avec la premier clé qu'on a crée, si vous avez crée plusieur clé, on peut lui preciser la clé 
+> ```
+> gpg -o <LeFichierQuiSeraGénéréApresLaSignature> --default-key  <laCléQu'onVeutSignerAvec> -a --sign <LeFichieràSigner>
+> ```
+
 
 > [!WARNING]
 > pour supprimer un clé , il faut d'abbord supprimer la clé privé associé à la clé publique et puis supprimer la clé publique (qui est affiché dans la command gpg --list-keys)
