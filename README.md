@@ -170,7 +170,6 @@ Supposons qu'on a deux VM `Kali` et `Ubuntu Serveur`
 
 
 > [!NOTE]
-
 > ```
 > Linux va signer le fichier avec la premier clé qu'on a crée, si vous avez crée plusieur clé, on peut lui preciser la clé 
 > ```
