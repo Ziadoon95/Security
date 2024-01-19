@@ -6,10 +6,11 @@ machine A
 
 //installation GPG
 sudo apt update
-
+```
 sudo apt install gnupg
+```
 
-gpg --version 
+> gpg --version 
 
 gpg --list-keys
 
