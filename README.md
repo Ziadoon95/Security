@@ -9,6 +9,10 @@ On va utiliser deux VM Linux sur VirtualBox.
 on peut installer Desktop sur ubuntu server
 
 [!NOTE] 
+dsqdsq
+
+
+
 > il est possible d'installer l'interface graphique sur Ubuntu serveur pour faciliter les tâches un peu
 > sudo apt update && sudo apt upgrade
 
