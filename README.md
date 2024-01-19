@@ -10,9 +10,13 @@ on peut installer Desktop sur ubuntu server
 
 > Useful information that users should know, even when skimming content.
 
-
+> [!NOTE]
 > il est possible d'installer l'interface graphique sur Ubuntu serveur pour faciliter les tâches un peu
 > sudo apt update && sudo apt upgrade
+> sudo apt install slim
+> sudo apt install ubuntu-desktop
+> sudo reboot
+
 
 
 
@@ -28,10 +32,7 @@ sudo apt install gnupg
 
 > gpg --version 
 
->[!NOTE]
->hi
 
-> [!NOTE]
 > gpg --list-keys
 
 gpg --full-generate-key
