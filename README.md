@@ -15,9 +15,13 @@ on peut installer Desktop sur ubuntu server
 > ```sudo apt update && sudo apt upgrade```
 > ```sudo apt install slim```
 > ```sudo apt install ubuntu-desktop```
-> ```sudo reboot```
+> ```
+> sudo reboot
+> ```
 
-
+ ```
+ sudo reboot
+ ```
 
 
 
