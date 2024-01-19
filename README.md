@@ -8,7 +8,6 @@ On va utiliser deux VM Linux sur VirtualBox.
 
 on peut installer Desktop sur ubuntu server
 
-> [!NOTE]
 > Useful information that users should know, even when skimming content.
 
 
@@ -28,6 +27,9 @@ sudo apt install gnupg
 ```
 
 > gpg --version 
+
+>[!NOTE]
+>hi
 
 > [!NOTE]
 > gpg --list-keys
