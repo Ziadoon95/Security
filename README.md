@@ -3,7 +3,8 @@
 
 Supposons qu'on a deux VM `Kali` et `Ubuntu Serveur`
  
- <h3 style="color: purple"> Alors sur les deux machines on execute les commandes suivantes</h3>
+# <span style="color: purple;"> Alors sur les deux machines on execute les commandes suivantes</span>
+>
 > **Installation GPG**
 > ```
 > sudo apt update && sudo apt upgrade
