@@ -1,5 +1,5 @@
 
-### préparation de l'environnement de travail 
+### Préparation de l'environnement de travail 
 
 On va utiliser deux VM Linux sur VirtualBox, la premiere est `Kali` et l'autre `Ubuntu Serveur`
 
