@@ -57,8 +57,8 @@ Supposons qu'on a deux VM `Kali` et `Ubuntu Serveur`
 > > Configuration de clé :<br>
 > > `RSA(onlyencrypt)` <br> `1024`<br> `0` (ne s'expire jamais) <br>  `nom` pour une question de lisibilté mettez le nom KaliLinux `mail` et par ex le mail kaliLinux@yahoo.com  `commentaire`
 > > <br>
-> On rentre le mot de passe, et la clé est crée
- **Verifier la DB**
+> > On rentre le mot de passe, et la clé est crée
+> **Verifier la DB**
 > ```
 > gpg --list-keys
 > ```
