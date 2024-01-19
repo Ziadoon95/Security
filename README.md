@@ -103,7 +103,8 @@ Supposons qu'on a deux VM `Kali` et `Ubuntu Serveur`
 > ```
 > le mot Uknown est changé en Ultimate et c'est tres important 
 
-
+## On retourne à Kali
+> [!TIP]
 >  ETAPE 3 **Créer le fichier à chiffrer**
 > ```
 > nano parKali
