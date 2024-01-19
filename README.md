@@ -3,7 +3,7 @@
 
 Supposons qu'on a deux VM `Kali` et `Ubuntu Serveur`
 > [!IMPORTANT]
-> Alors sur les deux machines on execute les commandes suivantes :
+> Alors sur les deux machines on execute les commandes suivantes : <br>
 > **Installation GPG**
 > ```
 > sudo apt update && sudo apt upgrade
@@ -11,6 +11,7 @@ Supposons qu'on a deux VM `Kali` et `Ubuntu Serveur`
 > ```
 > sudo apt install gnupg
 > ```
+> Vérifier si GPG est bien installé
 > ```
 > gpg --version
 > ```
@@ -43,21 +44,21 @@ Supposons qu'on a deux VM `Kali` et `Ubuntu Serveur`
 ## Kali(machine A)
 
 > [!TIP]
-> **Création d'un Clé**
+> **Création d'un Clé** <br>
 > Verifier la base de donnée des clé sur cette machine
 > ```
 > gpg --list-keys
 > ```
-> Créer un clé
+> Générer un clé
 > ```
 > gpg --full-generate-key
 > ```
-> ```
->  `RSA(onlyencrypt)`
->  `1024`
->  `0` (ne s'expire jamais) 
->  Entrez le `nom` , `mail` , `commentaire`
-> ```
+> > Configuration de clé : <br>
+> > `RSA(onlyencrypt)`
+> > `1024`
+> > `0` (ne s'expire jamais) 
+> > Entrez le `nom` , `mail` , `commentaire`
+> > <br>
 >  si tout est ok, on rentre le mot de passe
 > la clé a été crée
 > Verifier si la clé dans la DB
