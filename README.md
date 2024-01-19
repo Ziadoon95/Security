@@ -15,7 +15,7 @@ Supposons qu'on a deux VM `Kali` et `Ubuntu Serveur`
 > ```
 > gpg --version
 > ```
-> **Installez SSH**
+> **Installation SSH**
 > ```
 > sudo apt install openssh-server
 > ```
@@ -44,7 +44,7 @@ Supposons qu'on a deux VM `Kali` et `Ubuntu Serveur`
 ## Kali(machine A)
 
 > [!TIP]
-> **Création d'un Clé** <br>
+> ETAPE 1 **Création d'un Clé** <br>
 > Verifier la base de donnée des clé sur cette machine
 > ```
 > gpg --list-keys
@@ -53,20 +53,17 @@ Supposons qu'on a deux VM `Kali` et `Ubuntu Serveur`
 > ```
 > gpg --full-generate-key
 > ```
-> > Configuration de clé : <br>
-> > `RSA(onlyencrypt)`
-> > `1024`
-> > `0` (ne s'expire jamais) 
-> > Entrez le `nom` , `mail` , `commentaire`
+> > Configuration de clé :
+> > `RSA(onlyencrypt)` `1024` `0` (ne s'expire jamais)  `nom` `mail` `commentaire`
 > > <br>
 > On rentre le mot de passe, et la clé est crée  <br>
 > Verifier la DB 
 > ```
 > gpg --list-keys
 > ```
-> **Envoyer la clé publique de la machine A->B**
+>  ETAPE 2 **Envoyer la clé publique de la machine A->B**
 > ```
-> gpg --export -a -o public_key.asc <keyID>
+> gpg --export -a -o key_id.asc <keyID>
 > ```
 > Le Key ID on le trouve par la command " gpg --list-keys " <br>
 > IMAGE <br>
@@ -74,23 +71,51 @@ Supposons qu'on a deux VM `Kali` et `Ubuntu Serveur`
 > ```
 > scp ./key_id.asc  <ubuntuUserName>@<addresseIp>:/home/<ubuntuUserName>/Desktop/
 > ```
+
+
+// importer 
+>```
+> gpg --import <./key_id.asc>
 > ```
-> nano File1
+> Modifier la confiance de cette machine à la clé reçu par l'autre machine
+> ```
+> gpg --edit-key <key-id>
 > ```
 > ```
-> cat File1
+> `trust`
+> `5`
+> `(ulitimate)`
+> `save`
 > ```
 > ```
-> gpg -o File1signed -a --sign File1
+> gpg --list-keys
+> ```
+> on remarque la le mot Uknown est changé en Ultimate et c'est tres important 
+
+
+>  ETAPE 3 **Créer le fichier à chiffrer**
+> ```
+> nano parKali
+> ```
+> Ecrivez un text que vous voulez, appuiyez sur ctrl+o, nommez le "parKali" ou c'est que vous voulez
+> ```
+> cat parKali
 > ```
 > ```
-> gpg --verify <fileName>
+> gpg -o parKaliSigned -a --sign parKali
 > ```
+> ```
+> gpg --verify parKaliSigned
+> ```
+> ou bien (optionnel)
 > ```
 > gpg -o <outPutFile> --default-key  <keyiDtoSign> -a --sign <fileToSign>
 > ```
+> Chiffrer le fichier
 > ```
-> gpg -o File1signedE -a -r machineBkey --encrypt File1signed
+> ATTENTION ! ici on est toujour sur Kali (Machine A) pour chiffrer le fichier il faut install GNUPG et SSH et Generer un clé et envoyer La clé publique sur
+> Ubuntu (machine B) et l'envoyer à cette machine A
+> gpg -o parKaliSignedC -a -r machineBkey --encrypt parKaliSigned
 > ```
 > ```
 > //gpg --encrypt --recipient second_pc_public_key > encrypted_ls_output.gpg
