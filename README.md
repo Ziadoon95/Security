@@ -1,9 +1,7 @@
 
-### préparation de l'environnement de travail ###
+1- ### préparation de l'environnement de travail ###
 
-On va utiliser deux VM Linux sur VirtualBox.
-
-on peut installer Desktop sur ubuntu server
+On va utiliser deux VM Linux sur VirtualBox, la premiere est `Kali` et l'autre `Ubuntu Serveur`
 
 > [!NOTE]
 > il est possible d'installer l'interface graphique sur Ubuntu serveur pour faciliter les tâches un peu<br>
@@ -22,6 +20,7 @@ on peut installer Desktop sur ubuntu server
 > sudo reboot
 > ```
 
+2-
 machine A 
 
 
