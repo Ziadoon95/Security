@@ -2,7 +2,8 @@
 ### Préparation de l'environnement de travail
 
 Supposons qu'on a deux VM `Kali` et `Ubuntu Serveur`
-> [!IMPORTANT] alors sur les deux machines on execute les commandes suivantes :
+> [!IMPORTANT]
+> Alors sur les deux machines on execute les commandes suivantes :
 > **Installation GPG**
 > ```
 > sudo apt update && sudo apt upgrade
