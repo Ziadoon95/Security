@@ -20,7 +20,7 @@ On va utiliser deux VM Linux sur VirtualBox, la premiere est `Kali` et l'autre `
 > sudo reboot
 > ```
 
-1- ##Kali(machine A)
+## Kali(machine A)
 
 > [!TIP]
 > **Installation GPG**
