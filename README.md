@@ -2,7 +2,7 @@
 ### Préparation de l'environnement de travail
 
 Supposons qu'on a deux VM `Kali` et `Ubuntu Serveur`
-> [!IMPORTANT]
+> 
 > Alors sur les deux machines on execute les commandes suivantes : <br>
 > **Installation GPG**
 > ```
