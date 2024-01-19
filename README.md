@@ -59,9 +59,7 @@ Supposons qu'on a deux VM `Kali` et `Ubuntu Serveur`
 > > <br>
 >  On rentre le mot de passe, et la clé est crée <br>
 
-
-**Verifier la DB**
-
+> **Verifier la DB**
 > ```
 > gpg --list-keys
 > ```
