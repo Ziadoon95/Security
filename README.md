@@ -3,7 +3,7 @@
 
 Supposons qu'on a deux VM `Kali` et `Ubuntu Serveur`
  
-# <span style="color: purple;"> Alors sur les deux machines on execute les commandes suivantes</span>
+# ![#f03c15] Alors sur les deux machines on execute les commandes suivantes
 >
 > **Installation GPG**
 > ```
