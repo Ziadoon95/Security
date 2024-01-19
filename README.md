@@ -23,7 +23,7 @@ On va utiliser deux VM Linux sur VirtualBox, la premiere est `Kali` et l'autre `
 2- ##Kali(machine A)##
 
 > [!TIP]
-> ** installation GPG **
+> **Installation GPG**
 > ```
 > sudo apt update && sudo apt upgrade
 > ```
