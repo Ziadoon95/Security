@@ -22,8 +22,13 @@ on peut installer Desktop sur ubuntu server
 > sudo reboot
 > ```
 
+```bash
+sudo apt update && sudo apt upgrade
+```
 
-
+```java
+system.out.println("hello");
+```
 machine A 
 
 
