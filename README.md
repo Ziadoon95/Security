@@ -72,13 +72,17 @@ Supposons qu'on a deux VM `Kali` et `Ubuntu Serveur`
 > ```
 > scp ./key_id.asc  <ubuntuUserName>@<addresseIp>:/home/<ubuntuUserName>/Desktop/
 > ```
+> Example :
+> ```
+> scp ./key_id.asc  johnUbuntu@192.168.1.20:/home/johnUbuntu/Desktop/
+> ```
 
 
 ## Sur Ubuntu 
 > Sur Desktop ouvre le terminal, verifier si on a reçu la clé publique
 > ls
 >```
-> gpg --import <./key_id.asc>
+> gpg --import ./key_id.asc
 > ```
 > Modifier la confiance de cette machine à la clé reçu par l'autre machine : IMPORTANT
 > ```
