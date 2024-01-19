@@ -12,7 +12,9 @@ on peut installer Desktop sur ubuntu server
 > ```bash
 > sudo apt update && sudo apt upgrade
 > ```
-> ```bat
+> > Installer un gestionnaire d'affichage 
+> >  C'est une application qui démarre le serveur d'affichage, lance le bureau et gère l'authentification de l'utilisateur. Le gestionnaire par défaut, GDM3, est gourmand en ressources. Pour économiser les ressources système, envisagez un outil plus léger, tel que SLiM.
+> ```
 > sudo apt install slim
 > ```
 > ```
