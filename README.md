@@ -9,10 +9,10 @@ on peut installer Desktop sur ubuntu server
 
 > [!NOTE]
 > il est possible d'installer l'interface graphique sur Ubuntu serveur pour faciliter les tâches un peu<br>
-> ```
+> ```bash
 > sudo apt update && sudo apt upgrade
 > ```
-> ```
+> ```bat
 > sudo apt install slim
 > ```
 > ```
