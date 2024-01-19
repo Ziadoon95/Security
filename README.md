@@ -12,8 +12,8 @@ sudo apt install gnupg
 
 > gpg --version 
 
-`#0969DA`	
-gpg --list-keys
+> [!NOTE]
+> gpg --list-keys
 
 gpg --full-generate-key
 
