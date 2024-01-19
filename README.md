@@ -178,9 +178,15 @@ Supposons qu'on a deux VM `Kali` et `Ubuntu Serveur`
 
 
 > [!WARNING]
-> pour supprimer un clé , il faut d'abbord supprimer la clé privé associé à la clé publique et puis supprimer la clé publique (qui est affiché dans la command gpg --list-keys)
+> pour supprimer un clé , il faut d'abbord supprimer la clé privé associé à la clé publique et puis supprimer la clé publique <br>
+> ```
 > gpg --delete-secret-keys <ClePubliqueASupprime>
-> gpg --list-keys 
-> la clé est toujours la, que sa clé privé est supprimé , qui empechait de supprimé la clé>
+> ```
+> ```
+> gpg --list-keys
+> ```
+> la clé publique est toujours la,seulement sa clé privé est supprimé
+> ```
 > gpg --delete-keys <ClePubliqueASupprime>
+> ```
 > maintenant est supprimé
