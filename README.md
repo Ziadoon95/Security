@@ -105,7 +105,7 @@ On va utiliser deux VM Linux sur VirtualBox, la premiere est `Kali` et l'autre `
 > scp ./File1signedE  root@ipaddresseKali:/home/root95/Desktop/
 > ```
 
-2- ##Ubuntu Serveru (Machine B)
+ ## Ubuntu Serveru (Machine B)
 
 > [!TIP]
 > ```
