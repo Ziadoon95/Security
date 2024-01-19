@@ -84,6 +84,10 @@ Supposons qu'on a deux VM `Kali` et `Ubuntu Serveur`
 >```
 > gpg --import ./key_id.asc
 > ```
+> Verifier qu'on a reçu la clé
+> ```
+> gpg --list-keys
+> ```
 > Modifier la confiance de cette machine à la clé reçu par l'autre machine : IMPORTANT
 > ```
 > gpg --edit-key <key-id>
