@@ -80,6 +80,8 @@ Supposons qu'on a deux VM `Kali` et `Ubuntu Serveur`
 > ```
 > scp ./key_id.asc  johnUbuntu@192.168.1.20:/home/johnUbuntu/Desktop/
 > ```
+> ATTENTION ! ici on est toujour sur Kali (Machine A) pour chiffrer le fichier il faut install GNUPG et SSH et Generer un clé et envoyer La clé publique sur
+> Ubuntu (machine B) et l'envoyer à cette machine A
 
 
 ## Sur Ubuntu 
@@ -118,72 +120,58 @@ Supposons qu'on a deux VM `Kali` et `Ubuntu Serveur`
 > ```
 > cat parKali
 > ```
+> CETTE ETAPE EST OPTIONELLE, on peut signer un fichier aussi avant de chiffrer...il sert à quoi la signature ? aucune idée :D
+> on peut verifier si un fichier a été signé et par quel clé et qui <br>
+> Cette commande on va signer le fichier avec le mot de passe de notre clé publique, et génére un fichier signé(par -o)
+> ```
+> gpg -o <fichierGénéréApresLaSignature> -a --sign <fichierASignerEtChiffrer>
+> ```
+> Example :
+> ```
+> gpg -o parKaliSigned -a --sign parKali
+> ```
 > Chiffrer le fichier
 > ```
-> ATTENTION ! ici on est toujour sur Kali (Machine A) pour chiffrer le fichier il faut install GNUPG et SSH et Generer un clé et envoyer La clé publique sur
-> Ubuntu (machine B) et l'envoyer à cette machine A
 > gpg -o parKaliSignedC -a -r machineBkey --encrypt parKaliSigned
 > ```
+> Example :
 > ```
-> //gpg --encrypt --recipient second_pc_public_key > encrypted_ls_output.gpg
-> ```
-> ```
-> gpg -o H1signedE -a -recipient machineBkey --encrypt H1signed
+> gpg -o parKaliSignedC -a -r 9EFB5AE309097ED783946D7B778D12FF514D11F2 --encrypt parKaliSigned 
 > ```
 > ```
-> cat File1signedE
+> cat parKaliSignedC
 > ```
+> Envoyer le fichier Chiffré et signé à l'autre Machine
 > ```
-> pwd pour connaitre le chemfin
-> ```
-> ```
-> scp ./File1signedE  root@ipaddresseKali:/home/root95/Desktop/
+> scp ./parKaliSignedC  johnUbuntu@192.168.1.20:/home/johnUbuntu/Desktop/
 > ```
 
  ## Ubuntu Serveru (Machine B)
 
 > [!TIP]
-> ```
-> gpg --import <fichierCle>
-> ```
-> ```
-> gpg --edit-key [key-id]
-> ```
-> ```
-> trust
-> 5
-> (ulitimate)
-> save
-> ```
-> ```
-> gpg --list-keys
-> ```
-> (on remarque que la confiance de cette machine en cette clé est changé à ultimate apres avoir été uknown)
-> va recevoir les deux fichiers
-> ```
-> gpg -o File1C --decrypt File1E
-> ```
+> Verifier si le fichier Chiffré exist sur le bureau de Ubuntu
 > ```
 > ls
 > ```
 > ```
-> cat File1C
+> gpg -o parKaliDechiff --decrypt parKaliSignedC
+> ```
+> ```
+> cat parKaliDechiff
+> ```
+> On peut verifier si ce fichier est signé et par qui :
+> ```
+> gpg --verify parKaliDechiff
 > ```
 
 ***
 
 
-> [!IMPORTANT]
-> on peut signer un fichier aussi avant de chiffrer...il sert à quoi la signature ? aucune idée :D
-> parcontre on peut verifier si un fichier a été signé par l'autre machine et qui l'a signé <br>
-> qu'on lance cette commande on va signer avec le mot de passe de notre clé publique 
-> ```
-> gpg -o parKaliSigned -a --sign parKali
-> ```
-> ```
-> gpg --verify parKaliSigned
+> [!NOTE]
+
 > ```
 > Linux va signer le fichier avec la premier clé qu'on a crée, si vous avez crée plusieur clé, on peut lui preciser la clé 
+> ```
 > ```
 > gpg -o <LeFichierQuiSeraGénéréApresLaSignature> --default-key  <laCléQu'onVeutSignerAvec> -a --sign <LeFichieràSigner>
 > ```
