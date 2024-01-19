@@ -22,6 +22,7 @@ Supposons qu'on a deux VM `Kali` et `Ubuntu Serveur`
 > ```
 > sudo systemctl start ssh
 > ```
+> **Il faut pouvoir faire un PING entre les deux VM et que la service SSH tourne sur les 2 !**
 
 
 > [!NOTE]
@@ -54,7 +55,7 @@ Supposons qu'on a deux VM `Kali` et `Ubuntu Serveur`
 > gpg --full-generate-key
 > ```
 > > Configuration de clé :
-> > `RSA(onlyencrypt)` `1024` `0` (ne s'expire jamais)  `nom` `mail` `commentaire`
+> > `RSA(onlyencrypt)` `1024` `0` (ne s'expire jamais)  `nom` par une question de lisibilté mettez le nom KaliLinux `mail` et le mail kaliLinux@yahoo.com par example `commentaire`
 > > <br>
 > On rentre le mot de passe, et la clé est crée  <br>
 > Verifier la DB 
@@ -73,11 +74,13 @@ Supposons qu'on a deux VM `Kali` et `Ubuntu Serveur`
 > ```
 
 
-// importer 
+## Sur Ubuntu 
+> Sur Desktop ouvre le terminal, verifier si on a reçu la clé publique
+> ls
 >```
 > gpg --import <./key_id.asc>
 > ```
-> Modifier la confiance de cette machine à la clé reçu par l'autre machine
+> Modifier la confiance de cette machine à la clé reçu par l'autre machine : IMPORTANT
 > ```
 > gpg --edit-key <key-id>
 > ```
