@@ -66,6 +66,10 @@ Supposons qu'on a deux VM `Kali` et `Ubuntu Serveur`
 > ```
 > gpg --export -a -o key_id.asc <keyID>
 > ```
+> Example : 
+> ```
+> gpg --export -a -o key_id.asc 9EFB5AE309097ED783946D7B778D12FF514D11F2
+> ```
 > Le Key ID on le trouve par la command " gpg --list-keys " <br>
 >  ![what](https://raw.githubusercontent.com/Ziadoon95/Security/main/Screenshot%20(22).png) <br>
 > Envoyer la clé à l'autre machine par SSH
