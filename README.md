@@ -87,6 +87,7 @@ Supposons qu'on a deux VM `Kali` et `Ubuntu Serveur`
 
 
 ## Sur Ubuntu 
+> [!IMPORTANT]
 > Sur Desktop ouvre le terminal, verifier si on a reçu la clé publique
 > ls
 >```
@@ -151,7 +152,7 @@ Supposons qu'on a deux VM `Kali` et `Ubuntu Serveur`
 
  ## Ubuntu Serveru (Machine B)
 
-> [!TIP]
+> [!IMPORTANT]
 > Verifier si le fichier Chiffré exist sur le bureau de Ubuntu
 > ```
 > ls
@@ -170,7 +171,8 @@ Supposons qu'on a deux VM `Kali` et `Ubuntu Serveur`
 ***
 
 
-> [!NOTE]
+### Remarque 
+> 
 > ```
 > Linux va signer le fichier avec la premier clé qu'on a crée, si vous avez crée plusieur clé, on peut lui preciser la clé 
 > ```
