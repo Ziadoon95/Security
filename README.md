@@ -12,6 +12,7 @@ sudo apt install gnupg
 
 > gpg --version 
 
+`#fff6ff`
 gpg --list-keys
 
 gpg --full-generate-key
