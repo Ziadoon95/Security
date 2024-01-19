@@ -1,5 +1,3 @@
-Chiffrement- déchiffrement d'un fichier txt et l'échanger entre deux VM Linux ..
-
 
 ### préparation de l'environnement de travail ###
 
