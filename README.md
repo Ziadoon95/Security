@@ -1,7 +1,26 @@
 
-### Préparation de l'environnement de travail 
+### Préparation de l'environnement de travail
 
-On va utiliser deux VM Linux sur VirtualBox, la premiere est `Kali` et l'autre `Ubuntu Serveur`
+Supposons qu'on a deux VM `Kali` et `Ubuntu Serveur`
+> [!IMPORTANT] alors sur les deux machines on execute les commandes suivantes :
+> **Installation GPG**
+> ```
+> sudo apt update && sudo apt upgrade
+> ```
+> ```
+> sudo apt install gnupg
+> ```
+> ```
+> gpg --version
+> ```
+> **Installez SSH**
+> ```
+> sudo apt install openssh-server
+> ```
+> ```
+> sudo systemctl start ssh
+> ```
+
 
 > [!NOTE]
 > il est possible d'installer l'interface graphique sur Ubuntu serveur pour faciliter les tâches un peu<br>
@@ -23,23 +42,6 @@ On va utiliser deux VM Linux sur VirtualBox, la premiere est `Kali` et l'autre `
 ## Kali(machine A)
 
 > [!TIP]
-> **Installation GPG**
-> ```
-> sudo apt update && sudo apt upgrade
-> ```
-> ```
-> sudo apt install gnupg
-> ```
-> ```
-> gpg --version
-> ```
-> **Installez SSH**
-> ```
-> sudo apt install openssh-server
-> ```
-> ```
-> sudo systemctl start ssh
-> ```
 > **Création d'un Clé**
 > Verifier la base de donnée des clé sur cette machine
 > ```
