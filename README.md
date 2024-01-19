@@ -25,8 +25,8 @@ Supposons qu'on a deux VM `Kali` et `Ubuntu Serveur`
 > ```
 > **Il faut pouvoir faire un PING entre les deux VM et que la service SSH tourne sur les 2 !**
 
-
-> [!NOTE]
+### Remarque
+> 
 > il est possible d'installer l'interface graphique sur Ubuntu serveur pour faciliter les tâches un peu<br>
 > ```bash
 > sudo apt update && sudo apt upgrade
