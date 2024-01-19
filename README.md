@@ -45,7 +45,7 @@ Supposons qu'on a deux VM `Kali` et `Ubuntu Serveur`
 
 ## Kali(machine A)
 
-> [!TIP]
+> [!NOTE]
 > ETAPE 1 **Création d'un Clé** <br>
 > Verifier la base de donnée des clé sur cette machine
 > ```
@@ -114,7 +114,7 @@ Supposons qu'on a deux VM `Kali` et `Ubuntu Serveur`
 
 
 ## On retourne à Kali
-> [!TIP]
+> [!NOTE]
 > ETAPE 3 **Créer le fichier à chiffrer**
 > ```
 > nano parKali
@@ -170,8 +170,9 @@ Supposons qu'on a deux VM `Kali` et `Ubuntu Serveur`
 
 ***
 
+## BONUS 
 
-### Remarque 
+### Signer avec un autre clé publique 
 > 
 > ```
 > Linux va signer le fichier avec la premier clé qu'on a crée, si vous avez crée plusieur clé, on peut lui preciser la clé 
@@ -180,8 +181,8 @@ Supposons qu'on a deux VM `Kali` et `Ubuntu Serveur`
 > gpg -o <LeFichierQuiSeraGénéréApresLaSignature> --default-key  <laCléQu'onVeutSignerAvec> -a --sign <LeFichieràSigner>
 > ```
 
-
-> [!WARNING]
+### Supression d'un clé
+> 
 > pour supprimer un clé , il faut d'abbord supprimer la clé privé associé à la clé publique et puis supprimer la clé publique <br>
 > ```
 > gpg --delete-secret-keys <ClePubliqueASupprime>
