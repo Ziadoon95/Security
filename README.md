@@ -97,7 +97,7 @@ Supposons qu'on a deux VM `Kali` et `Ubuntu Serveur`
 > ```
 > gpg --list-keys
 > ```
-> on remarque la le mot Uknown est changé en Ultimate et c'est tres important 
+> le mot Uknown est changé en Ultimate et c'est tres important 
 
 
 >  ETAPE 3 **Créer le fichier à chiffrer**
