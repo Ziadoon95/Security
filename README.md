@@ -3,7 +3,7 @@
 
 Supposons qu'on a deux VM `Kali` et `Ubuntu Serveur`
  
-# Alors sur les deux machines on execute les commandes suivantes
+## Alors sur les deux machines on execute les commandes suivantes
 >
 > **Installation GPG**
 > ```
