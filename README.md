@@ -23,28 +23,51 @@ On va utiliser deux VM Linux sur VirtualBox, la premiere est `Kali` et l'autre `
 2- ##Kali(machine A)##
 
 > [!TIP]
-> installation GPG
+> ** installation GPG **
 > ```
 > sudo apt update && sudo apt upgrade
 > ```
 > ```
 > sudo apt install gnupg
 > ```
-> 
-> gpg --version 
+> ```
+> gpg --version
+> ```
+> ** Installez SSH **
+> ```
+> sudo apt install openssh-server
+> ```
+> ```
+> sudo systemctl start ssh
+> ```
+> ** Création d'un Clé **
+> Verifier la base de donnée des clé sur cette machine
+> ```
 > gpg --list-keys
+> ```
+> Créer un clé
+> ```
 > gpg --full-generate-key
-> RSA(onlyencrypt)
-> 1024
-> 0 (ne s'expire jamais) 
-> entrez le nom , mail , commentaire
-> si tout est ok
-> O
-> mnt on rentre le mot de passe
-> et voila 
+> ```
+> ```
+>  `RSA(onlyencrypt)`
+>  `1024`
+>  `0` (ne s'expire jamais) 
+>  Entrez le `nom` , `mail` , `commentaire`
+> ```
+>  si tout est ok, on rentre le mot de passe
+> la clé a été crée
+> Verifier si la clé dans la DB
+> ```
 > gpg --list-keys
-> //Envoyer la clé publique de la machine A->B 
+> ```
+> **Envoyer la clé publique de la machine A->B**
+> ```
 > gpg --export -a -o public_key.asc <keyID>
+> ```
+> Le Key ID on le trouve par la command " gpg --list-keys "
+> IMAGE
+> Envoyer la clé à l'autre machine par SSH 
 > scp ./key_id.asc  <ubuntuUserName>@<addresseIp>:/home/<ubuntuUserName>/Desktop/
 > nano File1
 > cat File1
