@@ -121,7 +121,8 @@ Supposons qu'on a deux VM `Kali` et `Ubuntu Serveur`
 > ```
 > cat parKali
 > ```
-> CETTE ETAPE EST OPTIONELLE, on peut signer un fichier aussi avant de chiffrer...il sert à quoi la signature ? aucune idée :D <br>
+> *CETTE ETAPE EST OPTIONELLE*
+> on peut signer un fichier aussi avant de chiffrer...il sert à quoi la signature ? aucune idée :D <br>
 > on peut verifier si un fichier a été signé et par quel clé et qui <br>
 > Cette commande va signer le fichier avec le mot de passe de notre clé publique, et génére un fichier signé(par -o)
 > ```
