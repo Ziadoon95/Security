@@ -12,9 +12,9 @@ on peut installer Desktop sur ubuntu server
 > ```bash
 > sudo apt update && sudo apt upgrade
 > ```
-> ```bat
-> sudo apt install slim
-> ```
+```bat
+sudo apt install slim
+```
 > ```
 > sudo apt install ubuntu-desktop
 > ```
@@ -22,13 +22,6 @@ on peut installer Desktop sur ubuntu server
 > sudo reboot
 > ```
 
-```bash
-sudo apt update && sudo apt upgrade
-```
-
-```java
-system.out.println("hello");
-```
 machine A 
 
 
