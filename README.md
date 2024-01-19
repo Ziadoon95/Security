@@ -67,7 +67,7 @@ Supposons qu'on a deux VM `Kali` et `Ubuntu Serveur`
 > gpg --export -a -o key_id.asc <keyID>
 > ```
 > Le Key ID on le trouve par la command " gpg --list-keys " <br>
->  ![what](./Screenshot (22).png) <br>
+>  ![what](https://raw.githubusercontent.com/Ziadoon95/Security/main/Screenshot%20(22).png) <br>
 > Envoyer la clé à l'autre machine par SSH
 > ```
 > scp ./key_id.asc  <ubuntuUserName>@<addresseIp>:/home/<ubuntuUserName>/Desktop/
