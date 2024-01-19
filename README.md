@@ -11,7 +11,7 @@ on peut installer Desktop sur ubuntu server
 > Useful information that users should know, even when skimming content.
 
 > [!NOTE]
-> il est possible d'installer l'interface graphique sur Ubuntu serveur pour faciliter les tâches un peu
+> il est possible d'installer l'interface graphique sur Ubuntu serveur pour faciliter les tâches un peu<br>
 > sudo apt update && sudo apt upgrade
 > sudo apt install slim
 > sudo apt install ubuntu-desktop
